@@ -328,8 +328,7 @@ public class EaglercraftHandler extends MessageToMessageCodec<WebSocketFrame, By
     }
 
     public void userEventTriggered(final ChannelHandlerContext ctx, final Object evt) throws Exception {
-        if (evt instanceof WebSocketServerProtocolHandler.HandshakeComplete) {
-            final WebSocketServerProtocolHandler.HandshakeComplete handshake = (WebSocketServerProtocolHandler.HandshakeComplete) evt;
+        if (evt instanceof WebSocketServerProtocolHandler.HandshakeComplete handshake) {
             if (!handshake.requestHeaders().contains("Host")) {
                 ctx.close();
                 return;

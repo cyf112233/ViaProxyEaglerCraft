@@ -6,7 +6,7 @@ public class SHA256Digest extends GeneralDigest {
 
     private int H1, H2, H3, H4, H5, H6, H7, H8;
 
-    private int[] X = new int[64];
+    private final int[] X = new int[64];
     private int xOff;
 
     public SHA256Digest() {
@@ -221,7 +221,7 @@ public class SHA256Digest extends GeneralDigest {
      * SHA-256 Constants (represent the first 32 bits of the fractional parts of the
      * cube roots of the first sixty-four prime numbers)
      */
-    static final int K[] = { 0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4,
+    static final int[] K = { 0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4,
             0xab1c5ed5, 0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
             0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152,
             0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138,
