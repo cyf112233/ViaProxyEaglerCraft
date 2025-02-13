@@ -1,8 +1,4 @@
 .gradle
 .idea
 build
-gradle
 libs
-gradlew
-gradlew.bat
-src/main/resources/*.png

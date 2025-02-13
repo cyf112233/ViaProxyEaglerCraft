@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunViaProxyEagUtils;
+package me.ayunami2000.viaeagler;
 
 import com.viaversion.viaversion.api.protocol.version.ProtocolVersion;
 import io.netty.buffer.ByteBuf;
@@ -19,7 +19,7 @@ import net.lenni0451.lambdaevents.EventHandler;
 import net.raphimc.netminecraft.constants.MCPipeline;
 import net.raphimc.netminecraft.netty.codec.PacketCodec;
 import net.raphimc.netminecraft.netty.connection.NetClient;
-import net.raphimc.netminecraft.packet.IPacket;
+import net.raphimc.netminecraft.packet.Packet;
 import net.raphimc.vialegacy.protocol.release.r1_6_4tor1_7_2_5.types.Types1_6_4;
 import net.raphimc.viaproxy.ViaProxy;
 import net.raphimc.viaproxy.plugins.ViaProxyPlugin;
@@ -204,11 +204,10 @@ public class Main extends ViaProxyPlugin {
         ch.pipeline().addAfter("eag-server-ws-handshaker", "eag-server-ws-ready", new WebSocketConnectedNotifier());
         ch.pipeline().addAfter("eag-server-ws-ready", "eag-server-handler", new EaglerServerHandler(proxyConnection, c2p.attr(eagxPass).get()));
         ch.pipeline().replace(MCPipeline.PACKET_CODEC_HANDLER_NAME, MCPipeline.PACKET_CODEC_HANDLER_NAME, new PacketCodec() {
-            protected void encode(ChannelHandlerContext ctx, IPacket in, ByteBuf out) {
+            protected void encode(ChannelHandlerContext ctx, Packet in, ByteBuf out) {
                 try {
                     super.encode(ctx, in, out);
-                } catch (IllegalStateException e) {
-                    //
+                } catch (IllegalStateException ignored) {
                 }
             }
         });

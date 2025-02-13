@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunViaProxyEagUtils;
+package me.ayunami2000.viaeagler;
 
 public class SHA256Digest extends GeneralDigest {
 

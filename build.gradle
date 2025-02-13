@@ -2,13 +2,16 @@ plugins {
     id 'java'
 }
 
-group 'me.ayunami2000.ayunViaProxyEagUtils'
-version '1.0-SNAPSHOT'
+group 'me.ayunami2000.viaeagler'
+version '1.0'
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://repo.viaversion.com"
+    }
 }
 
 dependencies {
-    implementation files("libs/ViaProxy-3.3.1+java8.jar")
+    implementation "net.raphimc:ViaProxy:3.4.0-SNAPSHOT"
 }

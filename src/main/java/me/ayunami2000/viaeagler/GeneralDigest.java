@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunViaProxyEagUtils;
+package me.ayunami2000.viaeagler;
 
 /**
  * base implementation of MD4 family style digest as outlined in "Handbook of

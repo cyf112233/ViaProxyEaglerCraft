@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunViaProxyEagUtils;
+package me.ayunami2000.viaeagler;
 
 import java.util.AbstractSet;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-name: ViaProxyEagUtils
+name: ViaProxyEaglerCraft
 version: 1.0
 author: ayunami2000
-main: me.ayunami2000.ayunViaProxyEagUtils.Main
+main: me.ayunami2000.viaeagler.Main

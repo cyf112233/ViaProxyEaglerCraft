@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunViaProxyEagUtils;
+package me.ayunami2000.viaeagler;
 
 import com.google.gson.JsonObject;
 import com.viaversion.viaversion.util.GsonUtil;

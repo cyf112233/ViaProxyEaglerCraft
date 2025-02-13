@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunViaProxyEagUtils;
+package me.ayunami2000.viaeagler;
 
 import com.google.common.primitives.Ints;
 import com.google.gson.JsonArray;

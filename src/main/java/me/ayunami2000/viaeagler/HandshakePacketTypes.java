@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunViaProxyEagUtils;
+package me.ayunami2000.viaeagler;
 
 /**
  * Copyright (c) 2022-2023 LAX1DUDE. All Rights Reserved.
